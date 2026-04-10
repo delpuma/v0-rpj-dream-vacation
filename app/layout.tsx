@@ -1,15 +1,10 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import dynamic from "next/dynamic"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { MobilePhoneBar } from "@/components/mobile-phone-bar"
-
-const AccessibilityWidget = dynamic(
-  () => import("@/components/accessibility-widget"),
-  { ssr: false }
-)
+import { AccessibilityLoader } from "@/components/accessibility-loader"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -108,7 +103,7 @@ export default function RootLayout({
         >
           {children}
           <MobilePhoneBar />
-          <AccessibilityWidget />
+          <AccessibilityLoader />
         </ThemeProvider>
       </body>
     </html>
