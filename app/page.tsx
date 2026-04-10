@@ -12,6 +12,7 @@ import { BlogSection } from "@/components/blog-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { PhoneCtaBanner } from "@/components/phone-cta-banner"
 import { StatsSection } from "@/components/stats-section"
+import { DealsSection } from "@/components/deals-section"
 
 const SITE = "https://traveladvisorsgroup.com"
 
@@ -208,6 +209,7 @@ export default function Home() {
         <BlogSection />
         <ServicesSection />
         <PhoneCtaBanner text="Cruises, resorts, honeymoons & more — let Richard handle the details." variant="gold" />
+        <DealsSection />
         <FeaturedTripsSection />
         <TestimonialsSection />
         <ContactFormSection />

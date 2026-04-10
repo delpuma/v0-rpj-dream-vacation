@@ -299,10 +299,28 @@ const EX = ":not([data-a11y-widget]):not([data-a11y-widget] *)"
 
 function buildStyleSheet(s: AccessibilitySettings): string {
   const r: string[] = []
+
+  // Always inject widget isolation — locks the widget to a fixed 16px base
+  // regardless of any accessibility setting the user toggles
+  r.push(
+    `[data-a11y-widget], [data-a11y-widget] * {
+      font-size: 16px !important;
+      line-height: 1.4 !important;
+      letter-spacing: 0px !important;
+      word-spacing: 0px !important;
+      text-align: left !important;
+      font-family: system-ui, -apple-system, sans-serif !important;
+      filter: none !important;
+      transform: none !important;
+    }
+    [data-a11y-widget] button[style*="transform"],
+    [data-a11y-widget] [style*="transform"] {
+      transform: var(--a11y-allow-transform) !important;
+    }`
+  )
+
   if (s.textSize !== 100)
-    r.push(
-      `html { font-size: ${s.textSize}% !important; } [data-a11y-widget], [data-a11y-widget] * { font-size: 16px !important; }`
-    )
+    r.push(`html { font-size: ${s.textSize}% !important; }`)
   if (s.lineHeight > 0)
     r.push(`body *${EX} { line-height: ${s.lineHeight} !important; }`)
   if (s.letterSpacing > 0)
@@ -1182,17 +1200,30 @@ function useBlindUsersAria(enabled: boolean) {
 function AccessibleIcon() {
   return (
     <svg
-      width={28}
-      height={28}
+      width={26}
+      height={26}
       viewBox="0 0 24 24"
       fill="none"
       aria-hidden="true"
       style={{ display: "block" }}
     >
-      <circle cx="12" cy="4.5" r="2.5" fill="white" />
+      {/* Universal wheelchair accessibility symbol */}
+      <circle cx="12" cy="12" r="11" stroke="white" strokeWidth="1.5" fill="none" />
+      <circle cx="12" cy="5.5" r="1.8" fill="white" />
       <path
-        d="M12 8c-3.5 0-6 1-6 1l1 2s1.5-.5 3.5-.7V13l-3 7h2.5l2-5 2 5H16.5l-3-7v-2.7c2 .2 3.5.7 3.5.7l1-2s-2.5-1-6-1z"
-        fill="white"
+        d="M12 8.5V13h3.5l1.5 4"
+        stroke="white"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M9 20a5 5 0 1 1 6.36-3"
+        stroke="white"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        fill="none"
       />
     </svg>
   )
@@ -1323,33 +1354,36 @@ export default function AccessibilityWidget() {
             ? "Close accessibility settings"
             : "Open accessibility settings"
         }
-        title="Accessibility"
+        title="Accessibility Settings"
         style={{
           ...WIDGET_BASE,
           position: "fixed",
-          bottom: "96px",
-          left: "16px",
+          bottom: "20px",
+          left: "20px",
           zIndex: 9998,
-          width: "48px",
-          height: "48px",
+          width: "52px",
+          height: "52px",
           borderRadius: "50%",
           background: "#0c4a6e",
           color: "#fff",
-          border: "none",
-          boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+          border: "2px solid rgba(255,255,255,0.3)",
+          boxShadow: "0 4px 14px rgba(0,0,0,0.35)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
           cursor: "pointer",
-          transition: "transform 200ms",
-          transform: "scale(1)",
+          transition: "transform 200ms, box-shadow 200ms",
+          // @ts-expect-error CSS custom property for isolation override
+          "--a11y-allow-transform": "scale(1)",
         }}
-        onMouseEnter={(e) =>
-          (e.currentTarget.style.transform = "scale(1.1)")
-        }
-        onMouseLeave={(e) =>
-          (e.currentTarget.style.transform = "scale(1)")
-        }
+        onMouseEnter={(e) => {
+          e.currentTarget.style.setProperty("--a11y-allow-transform", "scale(1.1)")
+          e.currentTarget.style.boxShadow = "0 6px 20px rgba(0,0,0,0.4)"
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.setProperty("--a11y-allow-transform", "scale(1)")
+          e.currentTarget.style.boxShadow = "0 4px 14px rgba(0,0,0,0.35)"
+        }}
       >
         <AccessibleIcon />
       </button>
@@ -1359,8 +1393,8 @@ export default function AccessibilityWidget() {
         style={{
           ...WIDGET_BASE,
           position: "fixed",
-          bottom: "96px",
-          left: "16px",
+          bottom: "82px",
+          left: "20px",
           zIndex: 9999,
           width: "320px",
           maxHeight: "70vh",
@@ -1369,10 +1403,9 @@ export default function AccessibilityWidget() {
           boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
           border: "1px solid #e5e7eb",
           overflow: "hidden",
-          transition: "transform 300ms, opacity 300ms",
-          transformOrigin: "bottom left",
-          transform: open ? "scale(1)" : "scale(0.95)",
+          transition: "opacity 300ms, visibility 300ms",
           opacity: open ? 1 : 0,
+          visibility: open ? "visible" : "hidden",
           pointerEvents: open ? "auto" : "none",
         }}
       >

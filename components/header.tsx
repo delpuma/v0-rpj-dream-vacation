@@ -7,9 +7,9 @@ import { SheetTrigger, SheetContent, Sheet } from "@/components/ui/sheet"
 const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/trips", label: "Trip Ideas" },
+  { href: "/deals", label: "Deals" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
-  { href: "/#contact", label: "Contact" },
   { href: "/blog", label: "Blog" },
 ]
 
