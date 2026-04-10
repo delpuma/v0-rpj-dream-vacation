@@ -19,6 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Core pages
   add(all, BASE_URL, 1)
   add(all, `${BASE_URL}/about`, 0.9, "monthly")
+  add(all, `${BASE_URL}/services`, 0.9, "monthly")
   add(all, `${BASE_URL}/trips`, 0.9)
   add(all, `${BASE_URL}/blog`, 0.9, "daily")
   add(all, `${BASE_URL}/blog/culinary-adventures-2025`, 0.7, "monthly")

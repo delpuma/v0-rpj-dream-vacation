@@ -33,7 +33,7 @@ export function Footer() {
             <ul className="flex flex-col space-y-2">
               <li><Link href="/" className="text-sm text-blue-200 hover:text-white hover:underline">Home</Link></li>
               <li><Link href="/trips" className="text-sm text-blue-200 hover:text-white hover:underline">Trip Ideas</Link></li>
-              <li><Link href="/#services" className="text-sm text-blue-200 hover:text-white hover:underline">Services</Link></li>
+              <li><Link href="/services" className="text-sm text-blue-200 hover:text-white hover:underline">Services</Link></li>
               <li><Link href="/about" className="text-sm text-blue-200 hover:text-white hover:underline">About Richard</Link></li>
               <li><Link href="/#contact" className="text-sm text-blue-200 hover:text-white hover:underline">Get a Free Quote</Link></li>
               <li><Link href="/blog" className="text-sm text-blue-200 hover:text-white hover:underline">Travel Blog</Link></li>

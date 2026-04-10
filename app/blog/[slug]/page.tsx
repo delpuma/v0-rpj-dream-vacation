@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer"
 import { Chatbot } from "@/components/chatbot"
 import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 import { AGENT_INFO } from "@/lib/pseo-data"
+import { InlineLeadForm } from "@/components/inline-lead-form"
 import { Clock, Tag, Phone, ArrowLeft } from "lucide-react"
 
 export const revalidate = 3600
@@ -192,6 +193,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <Phone className="w-5 h-5" />
                   {AGENT_INFO.phone}
                 </a>
+              </div>
+
+              {/* Lead Capture Form */}
+              <div className="mb-10">
+                <InlineLeadForm source={`blog/${post.slug}`} heading="Inspired? Let Richard Plan Your Trip" subheading="Tell us what caught your eye — Richard will reach out with personalized options within 24 hours." />
               </div>
 
               {/* Tags */}

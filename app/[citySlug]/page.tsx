@@ -10,6 +10,7 @@ import { FaqSection } from "@/components/faq-section"
 import { Chatbot } from "@/components/chatbot"
 import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 import { SERVICE_AREAS, AGENT_INFO, TRIP_TYPES, CRUISE_LINES } from "@/lib/pseo-data"
+import { LocationMap } from "@/components/location-map"
 import { MapPin, Phone, Star, Shield, Award, CheckCircle, Clock, Ship, Heart, Users } from "lucide-react"
 
 const SITE = "https://traveladvisorsgroup.com"
@@ -320,6 +321,16 @@ export default async function CityPage({
                   ))}
                 </div>
               </div>
+
+              {/* Map */}
+              {city.lat && city.lng && (
+                <div className="mb-10">
+                  <h2 className="text-2xl font-bold text-gray-900 mb-4">
+                    {AGENT_INFO.name} — Serving {city.name} & Surrounding Areas
+                  </h2>
+                  <LocationMap lat={city.lat} lng={city.lng} name={`${city.name}, ${city.state}`} />
+                </div>
+              )}
 
               {/* CTA Banner */}
               <div className="bg-teal-600 rounded-xl p-6 md:p-8 text-white text-center mb-10">

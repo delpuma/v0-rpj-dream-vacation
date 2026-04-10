@@ -4,6 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { MapPin, Phone, Mail, Star, Shield, Award, Clock, CheckCircle } from "lucide-react"
 import { AGENT_INFO, DESTINATIONS, TRIP_TYPES, CRUISE_LINES } from "@/lib/pseo-data"
+import { getDestinationImage, getTripTypeImage, DEFAULT_TRAVEL_IMAGE } from "@/lib/travel-images"
 
 interface PseoPageContentProps {
   h1: string
@@ -22,11 +23,24 @@ export function PseoPageContent({
   sections,
   pageType,
 }: PseoPageContentProps) {
+  // Get hero image based on page context
+  const destSlug = DESTINATIONS.find((d) => d.name === destination)?.slug
+  const ttSlug = TRIP_TYPES.find((t) => t.name === tripType)?.slug
+  const heroImage = destSlug ? getDestinationImage(destSlug) : ttSlug ? getTripTypeImage(ttSlug) : DEFAULT_TRAVEL_IMAGE
+
   return (
     <>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white py-20 md:py-28">
-        <div className="absolute inset-0 bg-black/20" />
+      <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white py-20 md:py-28 overflow-hidden">
+        <Image
+          src={heroImage.url.replace("w=600&h=400", "w=1920&h=800")}
+          alt={heroImage.alt}
+          fill
+          sizes="100vw"
+          priority
+          className="object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-black/30" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-teal-300 font-medium mb-3 text-sm uppercase tracking-wider">

@@ -10,6 +10,7 @@ import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 import { FeaturedTripsSection } from "@/components/featured-trips-section"
 import { BlogSection } from "@/components/blog-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
+import { PhoneCtaBanner } from "@/components/phone-cta-banner"
 
 const SITE = "https://traveladvisorsgroup.com"
 
@@ -201,8 +202,10 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
         <AboutSection />
+        <PhoneCtaBanner text="Free vacation planning — no fees, no obligation. Call Richard today." />
         <BlogSection />
         <ServicesSection />
+        <PhoneCtaBanner text="Cruises, resorts, honeymoons & more — let Richard handle the details." />
         <FeaturedTripsSection />
         <TestimonialsSection />
         <ContactFormSection />

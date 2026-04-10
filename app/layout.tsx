@@ -1,8 +1,14 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import dynamic from "next/dynamic"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
+
+const AccessibilityWidget = dynamic(
+  () => import("@/components/accessibility-widget"),
+  { ssr: false }
+)
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -100,6 +106,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <AccessibilityWidget />
         </ThemeProvider>
       </body>
     </html>

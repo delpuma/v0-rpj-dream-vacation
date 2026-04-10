@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { Chatbot } from "@/components/chatbot"
 import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 import { AGENT_INFO } from "@/lib/pseo-data"
+import { InlineLeadForm } from "@/components/inline-lead-form"
 import { Phone, MapPin, Award, Shield, Star, CheckCircle, Ship, Heart, Users, Compass } from "lucide-react"
 
 const SITE = "https://traveladvisorsgroup.com"
@@ -139,6 +140,11 @@ export default function AboutPage() {
                     <span key={city} className="text-xs bg-blue-50 text-blue-700 px-3 py-1 rounded-full">{city}, FL</span>
                   ))}
                 </div>
+              </div>
+
+              {/* Lead Form */}
+              <div className="mb-12">
+                <InlineLeadForm source="about" heading="Schedule a Free Consultation with Richard" subheading="Tell Richard about your travel dreams — he'll reach out within 24 hours with personalized options." />
               </div>
 
               {/* CTA */}

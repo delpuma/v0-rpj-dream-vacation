@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer"
 import { Chatbot } from "@/components/chatbot"
 import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 import { AGENT_INFO } from "@/lib/pseo-data"
+import { InlineLeadForm } from "@/components/inline-lead-form"
 import { Clock, Tag } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -104,6 +105,15 @@ export default async function BlogIndexPage() {
                 ))}
               </div>
             )}
+          </div>
+        </section>
+
+        {/* Lead Form */}
+        <section className="py-12 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-2xl mx-auto">
+              <InlineLeadForm source="blog" heading="Ready to Turn Inspiration Into a Trip?" subheading="Tell Richard what you're dreaming about — he'll create a personalized plan within 24 hours." />
+            </div>
           </div>
         </section>
       </main>

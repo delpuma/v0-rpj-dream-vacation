@@ -25,7 +25,7 @@ export function Header() {
           <Link href="/trips" className="text-sm font-medium hover:underline underline-offset-4">
             Trip Ideas
           </Link>
-          <Link href="/#services" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link href="/services" className="text-sm font-medium hover:underline underline-offset-4">
             Services
           </Link>
           <Link href="/about" className="text-sm font-medium hover:underline underline-offset-4">
@@ -59,7 +59,7 @@ export function Header() {
               <Link href="/trips" className="text-lg font-medium">
                 Trip Ideas
               </Link>
-              <Link href="/#services" className="text-lg font-medium">
+              <Link href="/services" className="text-lg font-medium">
                 Services
               </Link>
               <Link href="/about" className="text-lg font-medium">
