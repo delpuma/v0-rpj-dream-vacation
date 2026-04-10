@@ -2,17 +2,19 @@ import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { AboutSection } from "@/components/about-section"
 import { ServicesSection } from "@/components/services-section"
-import { ContactFormSection } from "@/components/contact-form-section"
 import { Footer } from "@/components/footer"
-import { Chatbot } from "@/components/chatbot"
-import { ExploreCtaSection } from "@/components/explore-cta-section"
-import { ScrollToTopButton } from "@/components/scroll-to-top-button"
-import { FeaturedTripsSection } from "@/components/featured-trips-section"
 import { BlogSection } from "@/components/blog-section"
-import { TestimonialsSection } from "@/components/testimonials-section"
 import { PhoneCtaBanner } from "@/components/phone-cta-banner"
 import { StatsSection } from "@/components/stats-section"
 import { DealsSection } from "@/components/deals-section"
+import {
+  LazyFeaturedTrips,
+  LazyTestimonials,
+  LazyContactForm,
+  LazyExploreCta,
+  LazyChatbot,
+  LazyScrollToTop,
+} from "@/components/lazy-sections"
 
 const SITE = "https://traveladvisorsgroup.com"
 
@@ -210,13 +212,13 @@ export default function Home() {
         <ServicesSection />
         <PhoneCtaBanner text="Cruises, resorts, honeymoons & more — let Richard handle the details." variant="gold" />
         <DealsSection />
-        <FeaturedTripsSection />
-        <TestimonialsSection />
-        <ContactFormSection />
-        <ExploreCtaSection />
+        <LazyFeaturedTrips />
+        <LazyTestimonials />
+        <LazyContactForm />
+        <LazyExploreCta />
       </main>
-      <Chatbot />
-      <ScrollToTopButton />
+      <LazyChatbot />
+      <LazyScrollToTop />
       <Footer />
     </div>
   )

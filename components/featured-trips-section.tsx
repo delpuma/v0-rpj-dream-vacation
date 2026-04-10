@@ -265,16 +265,24 @@ export function FeaturedTripsSection() {
             <h3 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-blue-700 mb-6 text-center">
               Experience Sandals: Watch Our Video
             </h3>
-            <div className="relative w-full" style={{ paddingBottom: "56.25%" /* 16:9 Aspect Ratio */ }}>
-              <iframe
-                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl"
-                src="https://www.youtube.com/embed/VD0d2jMGHso"
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+              <a
+                href="https://www.youtube.com/watch?v=VD0d2jMGHso"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-xl bg-gray-900 flex items-center justify-center group cursor-pointer overflow-hidden"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://img.youtube.com/vi/VD0d2jMGHso/hqdefault.jpg"
+                  alt="Sandals Resort Video"
+                  className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
+                  loading="lazy"
+                />
+                <div className="relative z-10 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                  <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </a>
             </div>
           </div>
         </div>
