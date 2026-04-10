@@ -5,7 +5,7 @@ import { Award, Shield, Star } from "lucide-react"
 
 export function AboutSection() {
   return (
-    <section id="about" className="w-full py-16 md:py-24 lg:py-32 bg-white">
+    <section id="about" className="w-full py-16 md:py-24 lg:py-32 bg-white scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div className="space-y-6">
@@ -57,7 +57,7 @@ export function AboutSection() {
                 className="rounded-2xl shadow-2xl object-cover"
               />
               {/* Floating card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3 animate-fade-up">
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3 animate-fade-up hidden md:flex">
                 <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center">
                   <Star className="w-5 h-5 text-teal-600" />
                 </div>

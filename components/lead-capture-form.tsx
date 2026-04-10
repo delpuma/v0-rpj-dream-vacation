@@ -49,7 +49,7 @@ export function LeadCaptureForm({
   }
 
   return (
-    <section id="get-quote" className="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white">
+    <section id="get-quote" className="py-16 bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
           {/* Contact Info */}

@@ -67,7 +67,7 @@ export function ContactFormSection() {
   }
 
   return (
-    <section id="contact" className="w-full py-8 md:py-16 lg:py-32 bg-gradient-to-t from-white to-blue-50">
+    <section id="contact" className="w-full py-8 md:py-16 lg:py-32 bg-gradient-to-t from-white to-blue-50 scroll-mt-20">
       <div className="container mx-auto px-4 md:px-6 flex flex-col items-center">
         <div className="text-center space-y-4 mb-8">
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-tight text-blue-800">

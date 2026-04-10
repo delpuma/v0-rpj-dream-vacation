@@ -7,7 +7,7 @@ import { PhoneIcon, ChevronDown } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative w-full h-[100dvh] min-h-[600px] max-h-[900px] flex items-center justify-center text-center text-white overflow-hidden">
+    <section className="relative w-full h-[100dvh] min-h-[500px] max-h-[900px] flex items-center justify-center text-center text-white overflow-hidden">
       {/* Background image with subtle zoom */}
       <Image
         src="/romantic-beach-walk.png"
@@ -32,7 +32,7 @@ export function HeroSection() {
         </div>
 
         {/* Headline */}
-        <h1 className="animate-fade-up delay-100 text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] drop-shadow-lg mb-6">
+        <h1 className="animate-fade-up delay-100 text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] drop-shadow-lg mb-6">
           Luxury Vacations,{" "}
           <span className="bg-gradient-to-r from-teal-300 via-cyan-300 to-blue-300 bg-clip-text text-transparent">
             Personally Crafted
@@ -47,13 +47,13 @@ export function HeroSection() {
         {/* CTAs */}
         <div className="animate-fade-up delay-300 flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
           <Link href="#contact">
-            <Button className="shimmer bg-teal-500 hover:bg-teal-400 text-white text-lg px-8 py-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 h-auto">
+            <Button className="shimmer bg-teal-500 hover:bg-teal-400 text-white text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 h-auto">
               Get a Free Quote
             </Button>
           </Link>
           <Link
             href="tel:+14079512398"
-            className="pulse-ring inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 text-white text-lg font-medium px-8 py-4 rounded-full transition-all duration-300"
+            className="pulse-ring inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 text-white text-base sm:text-lg font-medium px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300"
           >
             <PhoneIcon className="h-5 w-5" />
             <span>(407) 951-2398</span>
