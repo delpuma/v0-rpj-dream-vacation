@@ -88,47 +88,47 @@ export function Footer() {
 
         {/* Service area links for local SEO */}
         <div className="mt-6 pt-6 border-t border-blue-700">
-          <p className="text-xs text-blue-400 mb-2 text-center">Serving travelers in:</p>
-          <div className="flex flex-wrap justify-center gap-x-3 gap-y-1 text-xs text-blue-300">
-            <Link href="/winter-garden-fl" className="hover:text-white hover:underline">Winter Garden FL</Link>
+          <p className="text-xs text-blue-300 mb-2 text-center">Serving travelers in:</p>
+          <div className="flex flex-wrap justify-center gap-x-3 gap-y-2 text-xs text-blue-300">
+            <Link href="/winter-garden-fl" className="hover:text-white hover:underline py-1">Winter Garden FL</Link>
             <span>·</span>
-            <Link href="/orlando-fl" className="hover:text-white hover:underline">Orlando FL</Link>
+            <Link href="/orlando-fl" className="hover:text-white hover:underline py-1">Orlando FL</Link>
             <span>·</span>
-            <Link href="/windermere-fl" className="hover:text-white hover:underline">Windermere FL</Link>
+            <Link href="/windermere-fl" className="hover:text-white hover:underline py-1">Windermere FL</Link>
             <span>·</span>
-            <Link href="/tampa-fl" className="hover:text-white hover:underline">Tampa FL</Link>
+            <Link href="/tampa-fl" className="hover:text-white hover:underline py-1">Tampa FL</Link>
             <span>·</span>
-            <Link href="/miami-fl" className="hover:text-white hover:underline">Miami FL</Link>
+            <Link href="/miami-fl" className="hover:text-white hover:underline py-1">Miami FL</Link>
             <span>·</span>
-            <Link href="/naples-fl" className="hover:text-white hover:underline">Naples FL</Link>
+            <Link href="/naples-fl" className="hover:text-white hover:underline py-1">Naples FL</Link>
             <span>·</span>
-            <Link href="/sarasota-fl" className="hover:text-white hover:underline">Sarasota FL</Link>
+            <Link href="/sarasota-fl" className="hover:text-white hover:underline py-1">Sarasota FL</Link>
             <span>·</span>
-            <Link href="/boca-raton-fl" className="hover:text-white hover:underline">Boca Raton FL</Link>
+            <Link href="/boca-raton-fl" className="hover:text-white hover:underline py-1">Boca Raton FL</Link>
             <span>·</span>
-            <Link href="/jacksonville-fl" className="hover:text-white hover:underline">Jacksonville FL</Link>
+            <Link href="/jacksonville-fl" className="hover:text-white hover:underline py-1">Jacksonville FL</Link>
             <span>·</span>
-            <Link href="/new-york-ny" className="hover:text-white hover:underline">New York</Link>
+            <Link href="/new-york-ny" className="hover:text-white hover:underline py-1">New York</Link>
             <span>·</span>
-            <Link href="/los-angeles-ca" className="hover:text-white hover:underline">Los Angeles</Link>
+            <Link href="/los-angeles-ca" className="hover:text-white hover:underline py-1">Los Angeles</Link>
             <span>·</span>
-            <Link href="/chicago-il" className="hover:text-white hover:underline">Chicago</Link>
+            <Link href="/chicago-il" className="hover:text-white hover:underline py-1">Chicago</Link>
             <span>·</span>
-            <Link href="/houston-tx" className="hover:text-white hover:underline">Houston</Link>
+            <Link href="/houston-tx" className="hover:text-white hover:underline py-1">Houston</Link>
             <span>·</span>
-            <Link href="/atlanta-ga" className="hover:text-white hover:underline">Atlanta</Link>
+            <Link href="/atlanta-ga" className="hover:text-white hover:underline py-1">Atlanta</Link>
             <span>·</span>
-            <Link href="/boston-ma" className="hover:text-white hover:underline">Boston</Link>
+            <Link href="/boston-ma" className="hover:text-white hover:underline py-1">Boston</Link>
             <span>·</span>
-            <Link href="/dallas-tx" className="hover:text-white hover:underline">Dallas</Link>
+            <Link href="/dallas-tx" className="hover:text-white hover:underline py-1">Dallas</Link>
             <span>·</span>
-            <Link href="/seattle-wa" className="hover:text-white hover:underline">Seattle</Link>
+            <Link href="/seattle-wa" className="hover:text-white hover:underline py-1">Seattle</Link>
             <span>·</span>
-            <Link href="/denver-co" className="hover:text-white hover:underline">Denver</Link>
+            <Link href="/denver-co" className="hover:text-white hover:underline py-1">Denver</Link>
             <span>·</span>
-            <Link href="/nashville-tn" className="hover:text-white hover:underline">Nashville</Link>
+            <Link href="/nashville-tn" className="hover:text-white hover:underline py-1">Nashville</Link>
             <span>·</span>
-            <Link href="/charlotte-nc" className="hover:text-white hover:underline">Charlotte</Link>
+            <Link href="/charlotte-nc" className="hover:text-white hover:underline py-1">Charlotte</Link>
           </div>
         </div>
       </div>

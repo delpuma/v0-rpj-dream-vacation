@@ -121,7 +121,7 @@ export async function DealsSection() {
               <div className="px-5 py-4 bg-gray-800/50 border-t border-gray-700 flex items-center justify-between">
                 <div>
                   {deal.price_original && (
-                    <span className="text-sm text-gray-500 line-through mr-2">
+                    <span className="text-sm text-gray-400 line-through mr-2">
                       ${Number(deal.price_original).toLocaleString()}
                     </span>
                   )}
@@ -131,13 +131,14 @@ export async function DealsSection() {
                     </span>
                   )}
                   {deal.cabin_type && (
-                    <span className="text-xs text-gray-500 block">{deal.cabin_type} · per person</span>
+                    <span className="text-xs text-gray-400 block">{deal.cabin_type} · per person</span>
                   )}
                 </div>
                 <div className="flex gap-2">
                   <a
                     href={`tel:${AGENT_INFO.phoneTel}`}
-                    className="bg-teal-600 hover:bg-teal-500 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors flex items-center gap-1"
+                    className="bg-teal-600 hover:bg-teal-500 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors flex items-center gap-1 min-h-[44px]"
+                    aria-label={`Call to book ${deal.title}`}
                   >
                     <Phone className="w-3.5 h-3.5" />
                     Book
@@ -147,7 +148,8 @@ export async function DealsSection() {
                       href={deal.booking_url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium px-3 py-2 rounded-lg transition-colors flex items-center gap-1"
+                      className="bg-gray-700 hover:bg-gray-600 text-white text-sm font-medium px-3 py-2.5 rounded-lg transition-colors flex items-center gap-1 min-h-[44px]"
+                      aria-label={`View details for ${deal.title}`}
                     >
                       <ArrowRight className="w-3.5 h-3.5" />
                       Details

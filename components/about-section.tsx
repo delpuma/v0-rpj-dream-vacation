@@ -9,7 +9,7 @@ export function AboutSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-2 items-center">
           <div className="space-y-6">
-            <p className="text-teal-600 font-medium text-sm uppercase tracking-wider">Meet Your Travel Advisor</p>
+            <p className="text-teal-700 font-medium text-sm uppercase tracking-wider">Meet Your Travel Advisor</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 leading-tight">
               Richard Johnson &<br />Travel Advisors Group
             </h2>
@@ -35,12 +35,12 @@ export function AboutSection() {
 
             <div className="flex flex-wrap gap-3 pt-2">
               <Link href="/about">
-                <Button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full h-auto text-base">
+                <Button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full h-auto text-base min-h-[48px]">
                   Learn More About Richard →
                 </Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-full h-auto text-base">
+                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-full h-auto text-base min-h-[48px]">
                   View Services
                 </Button>
               </Link>

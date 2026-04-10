@@ -61,7 +61,7 @@ const TESTIMONIALS = [
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-0.5" aria-label={`${rating} out of 5 stars`}>
+    <div className="flex gap-0.5" role="img" aria-label={`${rating} out of 5 stars`}>
       {Array.from({ length: 5 }).map((_, i) => (
         <Star
           key={i}
@@ -146,7 +146,7 @@ export function TestimonialsSection({ limit = 6 }: { limit?: number }) {
                   </div>
                   <div className="text-right">
                     <StarRating rating={testimonial.rating} />
-                    <p className="text-xs text-gray-400 mt-1">
+                    <p className="text-xs text-gray-600 mt-1">
                       {testimonial.tripType} · {testimonial.destination}
                     </p>
                   </div>
