@@ -55,6 +55,7 @@ export function AboutSection() {
                 width={480}
                 height={480}
                 className="rounded-2xl shadow-2xl object-cover"
+                loading="lazy"
               />
               {/* Floating card */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3 animate-fade-up hidden md:flex">

@@ -93,38 +93,22 @@
   }
 }
 
-/* Scroll-triggered fade-in animations */
+/* Scroll-triggered fade-in animations — GPU accelerated */
 @layer utilities {
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
     opacity: 0;
+    will-change: transform, opacity;
   }
   .animate-fade-in {
     animation: fadeIn 0.5s ease-out forwards;
-  }
-  .animate-slide-in-left {
-    animation: slideInLeft 0.6s ease-out forwards;
-    opacity: 0;
-  }
-  .animate-slide-in-right {
-    animation: slideInRight 0.6s ease-out forwards;
-    opacity: 0;
-  }
-  .animate-scale-in {
-    animation: scaleIn 0.5s ease-out forwards;
-    opacity: 0;
+    will-change: opacity;
   }
   /* Stagger delays */
   .delay-100 { animation-delay: 100ms; }
   .delay-200 { animation-delay: 200ms; }
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
-  .delay-500 { animation-delay: 500ms; }
-
-  /* Subtle parallax on hero */
-  .hero-parallax {
-    will-change: transform;
-  }
 
   /* Glass morphism effect */
   .glass {
@@ -135,17 +119,9 @@
   }
 
   /* Luxury gold accent */
-  .text-gold {
-    color: #c9a84c;
-  }
-  .bg-gold {
-    background-color: #c9a84c;
-  }
-  .border-gold {
-    border-color: #c9a84c;
-  }
+  .text-gold { color: #c9a84c; }
 
-  /* Shimmer effect for CTAs */
+  /* Shimmer effect for CTAs — GPU only */
   .shimmer {
     position: relative;
     overflow: hidden;
@@ -159,9 +135,10 @@
     height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
     animation: shimmer 3s infinite;
+    will-change: transform;
   }
 
-  /* Pulse ring for phone CTAs */
+  /* Pulse ring for phone CTAs — GPU only */
   .pulse-ring {
     position: relative;
   }
@@ -173,6 +150,7 @@
     border: 2px solid currentColor;
     opacity: 0;
     animation: pulseRing 2s ease-out infinite;
+    will-change: transform, opacity;
   }
 }
 
@@ -197,9 +175,9 @@
   to { opacity: 1; transform: scale(1); }
 }
 @keyframes shimmer {
-  0% { left: -100%; }
-  50% { left: 100%; }
-  100% { left: 100%; }
+  0% { transform: translateX(-200%); }
+  50% { transform: translateX(200%); }
+  100% { transform: translateX(200%); }
 }
 @keyframes pulseRing {
   0% { opacity: 0.6; transform: scale(1); }
