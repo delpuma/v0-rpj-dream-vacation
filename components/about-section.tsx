@@ -1,4 +1,6 @@
 import Image from "next/image"
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 
 export function AboutSection() {
   return (
@@ -7,28 +9,32 @@ export function AboutSection() {
         <div className="grid gap-10 lg:grid-cols-2 items-center">
           <div className="space-y-4">
             <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-tight text-blue-800">
-              About Richard Johnson Travel Advisors Group
+              About Richard Johnson & Travel Advisors Group
             </h2>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Welcome to Dream Vacations by Richard Johnson Travel Advisors Group, your dedicated travel partner based
-              right here in Winter Garden, FL. With years of experience and a passion for exploration, we specialize in
-              transforming your travel dreams into seamless realities. From serene beach getaways to thrilling adventure
-              tours, we handle every detail, ensuring a stress-free and memorable experience.
+              Welcome to Dream Vacations by Richard Johnson & Travel Advisors Group, your dedicated travel partner based
+              right here in Winter Garden, FL. With years of experience and a passion for exploration, Richard specializes in
+              transforming travel dreams into seamless realities — from luxury cruises and all-inclusive resorts to honeymoons,
+              destination weddings, and family vacations.
             </p>
             <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-              Our commitment is to provide personalized service, understanding your unique preferences to curate the
-              perfect itinerary. As local Winter Garden travel agents, we pride ourselves on building lasting
-              relationships and offering expert advice tailored to your needs. Let's embark on your next adventure
-              together!
+              As a CLIA certified travel advisor and Dream Vacations franchise owner, Richard provides personalized,
+              white-glove service at no cost to you. He serves travelers throughout Winter Garden, Orlando, Windermere,
+              and all of Central Florida — plus clients nationwide by phone and video call.
             </p>
+            <Link href="/about">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white mt-2">
+                Learn More About Richard →
+              </Button>
+            </Link>
           </div>
           <div className="flex justify-center">
             <Image
-              src="/beach-reader.png"
-              alt="Richard Johnson relaxing on a beach"
-              width={600}
-              height={400}
-              className="rounded-xl shadow-lg object-cover w-full max-w-lg"
+              src="/rj-headshot-2.jpg"
+              alt="Richard Johnson, Dream Vacations travel advisor in Winter Garden FL"
+              width={500}
+              height={500}
+              className="rounded-xl shadow-lg object-cover w-full max-w-md"
             />
           </div>
         </div>

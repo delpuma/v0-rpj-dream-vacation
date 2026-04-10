@@ -52,7 +52,7 @@ export function FeaturedTripsSection() {
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-4 pt-0">
-                <Link href="#contact" className="w-full">
+                <Link href="/trips/cruise-lines/uniworld/danube-river" className="w-full">
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Discover Holiday Magic</Button>
                 </Link>
               </CardFooter>
@@ -79,7 +79,7 @@ export function FeaturedTripsSection() {
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-4 pt-0">
-                <Link href="#contact" className="w-full">
+                <Link href="/trips/danube-river/holiday-cruise" className="w-full">
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     Celebrate the Holidays in Luxury
                   </Button>
@@ -108,7 +108,7 @@ export function FeaturedTripsSection() {
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-4 pt-0">
-                <Link href="#contact" className="w-full">
+                <Link href="/trips/cruise-lines/viking/danube-river" className="w-full">
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Experience the Grand Tour</Button>
                 </Link>
               </CardFooter>
@@ -149,7 +149,7 @@ export function FeaturedTripsSection() {
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-4 pt-0">
-                <Link href="#contact" className="w-full">
+                <Link href="/trips/cruise-lines/seabourn/panama-canal" className="w-full">
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Explore the Panama Canal</Button>
                 </Link>
               </CardFooter>
@@ -176,7 +176,7 @@ export function FeaturedTripsSection() {
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-4 pt-0">
-                <Link href="#contact" className="w-full">
+                <Link href="/trips/cruise-lines/viking/northern-europe" className="w-full">
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                     Witness the Northern Lights
                   </Button>
@@ -205,7 +205,7 @@ export function FeaturedTripsSection() {
                 </CardDescription>
               </CardContent>
               <CardFooter className="p-4 pt-0">
-                <Link href="#contact" className="w-full">
+                <Link href="/trips/cruise-lines/seabourn/caribbean" className="w-full">
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">Discover Caribbean Bliss</Button>
                 </Link>
               </CardFooter>
@@ -251,7 +251,7 @@ export function FeaturedTripsSection() {
                   </CardDescription>
                 </CardContent>
                 <CardFooter className="p-4 pt-0">
-                  <Link href="#contact" className="w-full">
+                  <Link href="/trips/cruise-lines/sandals-resorts" className="w-full">
                     <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
                       Plan Your Romantic Escape
                     </Button>

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "Culinary Adventures – Luxury Food Travel Trends 2025",
     description:
       "Food is becoming a primary travel motivator. Discover the top culinary travel trends—from Michelin‑starred experiences to wine festivals—and learn how to plan a delicious trip.",
-    url: "https://your-domain.com/blog/culinary-adventures-2025",
+    url: "https://traveladvisorsgroup.com/blog/culinary-adventures-2025",
     images: [{ url: "/images/blog/culinary-2025-hero.png", width: 1200, height: 630 }],
     type: "article",
   },
@@ -41,12 +41,12 @@ export default function Page() {
     headline: "Culinary Adventures – Luxury Food Travel Trends 2025",
     description:
       "Food is becoming a primary travel motivator. Discover the top culinary travel trends—from Michelin‑starred experiences to wine festivals—and learn how to plan a delicious trip.",
-    image: ["https://your-domain.com/images/blog/culinary-2025-hero.png"],
+    image: ["https://traveladvisorsgroup.com/images/blog/culinary-2025-hero.png"],
     author: { "@type": "Organization", name: "Dream Vacations by Richard Johnson & Travel Advisors Group" },
     publisher: {
       "@type": "Organization",
       name: "Dream Vacations by Richard Johnson & Travel Advisors Group",
-      logo: { "@type": "ImageObject", url: "https://your-domain.com/opengraph-image.png" },
+      logo: { "@type": "ImageObject", url: "https://traveladvisorsgroup.com/opengraph-image.png" },
     },
   }
 

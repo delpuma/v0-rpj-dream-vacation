@@ -8,7 +8,7 @@ export function Header() {
   return (
     <header className="w-full h-16 flex items-center bg-gradient-to-r from-blue-600 to-blue-400 text-white shadow-md">
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="#" className="flex items-center justify-center gap-2">
+        <Link href="/" className="flex items-center justify-center gap-2">
           <Image
             src="/dv-logo-white.png"
             alt="Dream Vacations by Richard Johnson & Travel Advisors Group Logo"
@@ -19,17 +19,23 @@ export function Header() {
           />
         </Link>
         <nav className="ml-auto hidden lg:flex items-center gap-4 lg:gap-6">
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link href="/" className="text-sm font-medium hover:underline underline-offset-4">
             Home
           </Link>
-          <Link href="#services" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link href="/trips" className="text-sm font-medium hover:underline underline-offset-4">
+            Trip Ideas
+          </Link>
+          <Link href="/#services" className="text-sm font-medium hover:underline underline-offset-4">
             Services
           </Link>
-          <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link href="/about" className="text-sm font-medium hover:underline underline-offset-4">
             About
           </Link>
-          <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4">
+          <Link href="/#contact" className="text-sm font-medium hover:underline underline-offset-4">
             Contact
+          </Link>
+          <Link href="/blog" className="text-sm font-medium hover:underline underline-offset-4">
+            Blog
           </Link>
           <Link href="tel:+14079512398" className="ml-4">
             <Button className="bg-white text-blue-600 hover:bg-gray-100 px-4 py-2 rounded-full text-sm font-medium flex items-center gap-2">
@@ -47,17 +53,23 @@ export function Header() {
           </SheetTrigger>
           <SheetContent side="right">
             <div className="flex flex-col gap-4 p-4">
-              <Link href="#" className="text-lg font-medium">
+              <Link href="/" className="text-lg font-medium">
                 Home
               </Link>
-              <Link href="#services" className="text-lg font-medium">
+              <Link href="/trips" className="text-lg font-medium">
+                Trip Ideas
+              </Link>
+              <Link href="/#services" className="text-lg font-medium">
                 Services
               </Link>
-              <Link href="#about" className="text-lg font-medium">
+              <Link href="/about" className="text-lg font-medium">
                 About
               </Link>
-              <Link href="#contact" className="text-lg font-medium">
+              <Link href="/#contact" className="text-lg font-medium">
                 Contact
+              </Link>
+              <Link href="/blog" className="text-lg font-medium">
+                Blog
               </Link>
               <Link href="tel:+14079512398" className="mt-4">
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white text-base py-2 flex items-center justify-center gap-2">
