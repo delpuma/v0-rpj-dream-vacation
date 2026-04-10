@@ -101,23 +101,24 @@ export function TestimonialsSection({ limit = 6 }: { limit?: number }) {
   }
 
   return (
-    <section className="w-full py-12 md:py-20 bg-gray-50">
+    <section className="w-full py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
       />
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-10">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-blue-800">
+        <div className="text-center mb-12">
+          <p className="text-teal-600 font-medium text-sm uppercase tracking-wider mb-2">Testimonials</p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900">
             What Our Clients Say
           </h2>
-          <p className="mt-3 text-gray-600 max-w-2xl mx-auto">
+          <p className="mt-3 text-gray-500 max-w-xl mx-auto">
             Real experiences from travelers who booked with Richard Johnson
           </p>
-          <div className="flex items-center justify-center gap-2 mt-3">
+          <div className="flex items-center justify-center gap-2 mt-4">
             <StarRating rating={5} />
             <span className="text-sm text-gray-600 font-medium">
-              5.0 average from {TESTIMONIALS.length} reviews
+              5.0 from {TESTIMONIALS.length} verified reviews
             </span>
           </div>
         </div>

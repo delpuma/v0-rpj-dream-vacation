@@ -70,6 +70,9 @@ export function ServicesSection() {
           <p className="max-w-3xl mx-auto text-base md:text-lg text-gray-700">
             Whether you dream of a relaxing cruise, an adventurous expedition, or a perfect family getaway — your travel agent in Winter Garden, FL has you covered.
           </p>
+          <Link href="/services" className="inline-block text-blue-600 hover:text-blue-700 font-medium text-sm hover:underline">
+            View all services in detail →
+          </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (

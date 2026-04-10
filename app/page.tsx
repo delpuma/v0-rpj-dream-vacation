@@ -11,6 +11,7 @@ import { FeaturedTripsSection } from "@/components/featured-trips-section"
 import { BlogSection } from "@/components/blog-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { PhoneCtaBanner } from "@/components/phone-cta-banner"
+import { StatsSection } from "@/components/stats-section"
 
 const SITE = "https://traveladvisorsgroup.com"
 
@@ -201,11 +202,12 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <HeroSection />
+        <StatsSection />
         <AboutSection />
-        <PhoneCtaBanner text="Free vacation planning — no fees, no obligation. Call Richard today." />
+        <PhoneCtaBanner text="Free vacation planning — no fees, no obligation. Call Richard today." variant="dark" />
         <BlogSection />
         <ServicesSection />
-        <PhoneCtaBanner text="Cruises, resorts, honeymoons & more — let Richard handle the details." />
+        <PhoneCtaBanner text="Cruises, resorts, honeymoons & more — let Richard handle the details." variant="gold" />
         <FeaturedTripsSection />
         <TestimonialsSection />
         <ContactFormSection />
