@@ -62,7 +62,7 @@ export function HeroSection() {
         </div>
 
         {/* Trust line */}
-        <p className="animate-fade-up delay-400 text-sm text-white/60">
+        <p className="animate-fade-up delay-400 text-sm text-white/80">
           CLIA Certified · Dream Vacations Franchise Owner · Serving Central Florida & Nationwide
         </p>
       </div>

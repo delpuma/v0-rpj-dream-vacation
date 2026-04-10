@@ -60,7 +60,7 @@ export async function DealsSection() {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
             Current Deals & Specials
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-300 max-w-2xl mx-auto">
             Exclusive pricing available through {AGENT_INFO.name}. These deals change frequently — call for the latest availability.
           </p>
         </div>
@@ -100,7 +100,7 @@ export async function DealsSection() {
                   </div>
                 )}
                 {deal.highlights && (
-                  <p className="text-gray-400 text-xs mt-1">{deal.highlights}</p>
+                  <p className="text-gray-300 text-xs mt-1">{deal.highlights}</p>
                 )}
               </div>
 
@@ -160,7 +160,7 @@ export async function DealsSection() {
         </div>
 
         <div className="text-center mt-10 space-y-3">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-300 text-sm">
             Prices shown are starting rates and subject to availability. Call for the latest pricing and cabin options.
           </p>
           <a

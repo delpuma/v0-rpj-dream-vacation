@@ -46,23 +46,23 @@ export function StatsSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center max-w-4xl mx-auto">
           <div className="animate-fade-up">
             <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-teal-400">$<AnimatedNumber target={0} /></p>
-            <p className="text-sm text-gray-400 mt-2">Planning Fees</p>
-            <p className="text-xs text-gray-500">Always Free</p>
+            <p className="text-sm text-gray-300 mt-2">Planning Fees</p>
+            <p className="text-xs text-gray-400">Always Free</p>
           </div>
           <div className="animate-fade-up delay-100">
             <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-teal-400"><AnimatedNumber target={24} />hr</p>
-            <p className="text-sm text-gray-400 mt-2">Response Time</p>
-            <p className="text-xs text-gray-500">Guaranteed</p>
+            <p className="text-sm text-gray-300 mt-2">Response Time</p>
+            <p className="text-xs text-gray-400">Guaranteed</p>
           </div>
           <div className="animate-fade-up delay-200">
             <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-teal-400"><AnimatedNumber target={14} suffix="+" /></p>
-            <p className="text-sm text-gray-400 mt-2">Cruise Lines</p>
-            <p className="text-xs text-gray-500">Certified Specialist</p>
+            <p className="text-sm text-gray-300 mt-2">Cruise Lines</p>
+            <p className="text-xs text-gray-400">Certified Specialist</p>
           </div>
           <div className="animate-fade-up delay-300">
             <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-gold">5★</p>
-            <p className="text-sm text-gray-400 mt-2">Client Rating</p>
-            <p className="text-xs text-gray-500">Verified Reviews</p>
+            <p className="text-sm text-gray-300 mt-2">Client Rating</p>
+            <p className="text-xs text-gray-400">Verified Reviews</p>
           </div>
         </div>
         <div className="text-center mt-10">
