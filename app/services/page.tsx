@@ -1,6 +1,5 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Chatbot } from "@/components/chatbot"
@@ -59,7 +58,10 @@ export default function ServicesPage() {
       <Header />
       <main className="flex-1">
         <section className="relative bg-gradient-to-br from-blue-900 to-teal-700 text-white py-16 md:py-24 overflow-hidden">
-          <Image src="https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="Cruise ship at sea" fill className="object-cover opacity-15" priority />
+          <div className="absolute inset-0 opacity-15">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://images.pexels.com/photos/813011/pexels-photo-813011.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="" className="w-full h-full object-cover" />
+          </div>
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-3xl md:text-5xl font-bold mb-4">Travel Services</h1>
             <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-6">Expert vacation planning by {AGENT_INFO.name} — free consultations, exclusive deals, and white-glove service for every type of trip.</p>
@@ -85,7 +87,8 @@ export default function ServicesPage() {
                 <div key={service.slug} id={service.slug} className={`flex flex-col ${i % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} gap-8 items-center`}>
                   <div className="w-full md:w-2/5 flex-shrink-0">
                     <div className="relative rounded-xl overflow-hidden shadow-lg h-64 md:h-80">
-                      <Image src={service.image} alt={service.name} fill sizes="(max-width: 768px) 100vw, 40vw" className="object-cover" />
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={service.image} alt={service.name} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
                     </div>
                   </div>
                   <div className="w-full md:w-3/5">

@@ -32,14 +32,10 @@ export function PseoPageContent({
     <>
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white py-20 md:py-28 overflow-hidden">
-        <Image
-          src={heroImage.url.replace("w=600&h=400", "w=1920&h=800")}
-          alt={heroImage.alt}
-          fill
-          sizes="100vw"
-          priority
-          className="object-cover opacity-20"
-        />
+        <div className="absolute inset-0 opacity-20">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={heroImage.url.replace("w=600&h=400", "w=1920&h=800")} alt="" className="w-full h-full object-cover" />
+        </div>
         <div className="absolute inset-0 bg-black/30" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">

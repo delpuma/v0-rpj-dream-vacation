@@ -12,15 +12,7 @@ const nextConfig = {
         protocol: "https",
         hostname: "images.pexels.com",
       },
-      {
-        protocol: "https",
-        hostname: "*.pexels.com",
-      },
     ],
-  },
-  // Enable ISR for dynamic pages
-  experimental: {
-    // Increase static generation timeout for large page counts
   },
 }
 

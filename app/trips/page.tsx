@@ -54,13 +54,10 @@ export default function TripsIndexPage() {
       <main className="flex-1">
         {/* Hero with background image */}
         <section className="relative bg-gradient-to-br from-blue-900 via-blue-800 to-teal-700 text-white py-16 md:py-24 overflow-hidden">
-          <Image
-            src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop"
-            alt="Tropical beach vacation destination"
-            fill
-            className="object-cover opacity-20"
-            priority
-          />
+          <div className="absolute inset-0 opacity-20">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://images.pexels.com/photos/1174732/pexels-photo-1174732.jpeg?auto=compress&cs=tinysrgb&w=1920&h=600&fit=crop" alt="" className="w-full h-full object-cover" />
+          </div>
           <div className="container mx-auto px-4 text-center relative z-10">
             <h1 className="text-3xl md:text-5xl font-bold mb-4">
               Explore Vacation Packages & Trip Ideas
@@ -98,8 +95,9 @@ export default function TripsIndexPage() {
               {DESTINATIONS.map((dest) => {
                 const img = getDestinationImage(dest.slug)
                 return (
-                  <Link key={dest.slug} href={`/trips/${dest.slug}`} className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all h-48">
-                    <Image src={img.url} alt={img.alt} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <Link key={dest.slug} href={`/trips/${dest.slug}`} className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all h-48 block">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={img.url} alt={img.alt} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <span className="text-white font-semibold text-sm md:text-base drop-shadow-md">{dest.name}</span>
@@ -124,8 +122,9 @@ export default function TripsIndexPage() {
               {TRIP_TYPES.map((tt) => {
                 const img = getTripTypeImage(tt.slug)
                 return (
-                  <Link key={tt.slug} href={`/trips/${tt.slug}`} className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all h-44">
-                    <Image src={img.url} alt={img.alt} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover group-hover:scale-105 transition-transform duration-300" />
+                  <Link key={tt.slug} href={`/trips/${tt.slug}`} className="group relative rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all h-44 block">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={img.url} alt={img.alt} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <span className="text-white font-semibold text-sm md:text-base drop-shadow-md">{tt.name}</span>
