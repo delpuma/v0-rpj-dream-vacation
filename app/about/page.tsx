@@ -9,7 +9,7 @@ import { AGENT_INFO } from "@/lib/pseo-data"
 import { InlineLeadForm } from "@/components/inline-lead-form"
 import { Phone, MapPin, Award, Shield, Star, CheckCircle, Ship, Heart, Users, Compass } from "lucide-react"
 
-const SITE = "https://traveladvisorsgroup.com"
+const SITE = "https://www.traveladvisorsgroup.com"
 
 export const metadata: Metadata = {
   title: `About ${AGENT_INFO.name} — Travel Agent Winter Garden FL | Dream Vacations`,

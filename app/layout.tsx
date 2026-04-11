@@ -8,7 +8,7 @@ import { AccessibilityLoader } from "@/components/accessibility-loader"
 
 const inter = Inter({ subsets: ["latin"] })
 
-const SITE_URL = "https://traveladvisorsgroup.com"
+const SITE_URL = "https://www.traveladvisorsgroup.com"
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { neon } from "@neondatabase/serverless"
 import { DESTINATIONS, TRIP_TYPES, CRUISE_LINES, SERVICE_AREAS } from "@/lib/pseo-data"
 
-const BASE_URL = "https://traveladvisorsgroup.com"
+const BASE_URL = "https://www.traveladvisorsgroup.com"
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date()

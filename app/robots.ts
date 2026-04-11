@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: ["https://traveladvisorsgroup.com/sitemap.xml", "https://www.traveladvisorsgroup.com/sitemap.xml"],
+    sitemap: ["https://www.traveladvisorsgroup.com/sitemap.xml"],
   }
 }

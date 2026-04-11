@@ -8,7 +8,7 @@ import { AGENT_INFO } from "@/lib/pseo-data"
 import { InlineLeadForm } from "@/components/inline-lead-form"
 import { Phone, Ship, Hotel, Heart, Users, Compass, MapPin, Crown, Sailboat, Gift } from "lucide-react"
 
-const SITE = "https://traveladvisorsgroup.com"
+const SITE = "https://www.traveladvisorsgroup.com"
 
 export const metadata: Metadata = {
   title: `Travel Services | ${AGENT_INFO.name} — Cruises, Resorts, Honeymoons & More`,

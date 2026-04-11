@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
       try {
         const resend = new Resend(resendApiKey)
         const tripInfo = [destination, tripType, cruiseLine].filter(Boolean).join(" · ") || "General inquiry"
-        const sourcePage = sourceSlug ? `https://traveladvisorsgroup.com/${sourceSlug}` : "Direct"
+        const sourcePage = sourceSlug ? `https://www.traveladvisorsgroup.com/${sourceSlug}` : "Direct"
 
         await resend.emails.send({
           from: "Travel Advisors Group <onboarding@resend.dev>",

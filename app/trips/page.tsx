@@ -10,7 +10,7 @@ import { getDestinationImage, getTripTypeImage } from "@/lib/travel-images"
 import { InlineLeadForm } from "@/components/inline-lead-form"
 import { MapPin, Compass, Anchor, Phone } from "lucide-react"
 
-const SITE = "https://traveladvisorsgroup.com"
+const SITE = "https://www.traveladvisorsgroup.com"
 
 export const metadata: Metadata = {
   title: `Vacation Packages & Trip Ideas | ${AGENT_INFO.name} — Travel Agent Winter Garden FL`,

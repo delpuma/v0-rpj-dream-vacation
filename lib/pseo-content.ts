@@ -362,7 +362,7 @@ export function generateFaqSchema(params: ContentParams) {
 }
 
 export function generateBreadcrumbSchema(params: ContentParams) {
-  const BASE = "https://traveladvisorsgroup.com"
+  const BASE = "https://www.traveladvisorsgroup.com"
   const items: { name: string; url: string }[] = [
     { name: "Home", url: BASE },
     { name: "Trip Ideas", url: `${BASE}/trips` },

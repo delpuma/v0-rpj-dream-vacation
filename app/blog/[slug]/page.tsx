@@ -14,7 +14,7 @@ import { Clock, Tag, Phone, ArrowLeft } from "lucide-react"
 export const revalidate = 3600
 export const dynamicParams = true
 
-const SITE = "https://traveladvisorsgroup.com"
+const SITE = "https://www.traveladvisorsgroup.com"
 
 interface BlogPost {
   id: number

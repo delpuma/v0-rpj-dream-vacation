@@ -16,7 +16,7 @@ import {
   LazyScrollToTop,
 } from "@/components/lazy-sections"
 
-const SITE = "https://traveladvisorsgroup.com"
+const SITE = "https://www.traveladvisorsgroup.com"
 
 export default function Home() {
   // TravelAgency schema — the primary business entity

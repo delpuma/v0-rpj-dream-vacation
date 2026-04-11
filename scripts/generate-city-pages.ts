@@ -16,7 +16,7 @@ const AGENT = {
   phoneTel: "+14079512398",
   location: "Winter Garden, FL",
   business: "Dream Vacations — Richard Johnson & Travel Advisors Group",
-  site: "https://traveladvisorsgroup.com",
+  site: "https://www.traveladvisorsgroup.com",
 }
 
 interface CityData {

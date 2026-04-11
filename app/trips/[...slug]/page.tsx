@@ -262,7 +262,7 @@ export default async function TripPage({
     ...pageData,
     title,
     description,
-    url: `https://traveladvisorsgroup.com/trips/${pageData.slug}`,
+    url: `https://www.traveladvisorsgroup.com/trips/${pageData.slug}`,
   })
   const faqSchema = generateFaqSchema(pageData)
   const breadcrumbSchema = generateBreadcrumbSchema(pageData)

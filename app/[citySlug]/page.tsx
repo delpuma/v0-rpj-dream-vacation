@@ -13,7 +13,7 @@ import { SERVICE_AREAS, AGENT_INFO, TRIP_TYPES, CRUISE_LINES } from "@/lib/pseo-
 import { LocationMap } from "@/components/location-map"
 import { MapPin, Phone, Star, Shield, Award, CheckCircle, Clock, Ship, Heart, Users } from "lucide-react"
 
-const SITE = "https://traveladvisorsgroup.com"
+const SITE = "https://www.traveladvisorsgroup.com"
 
 export const revalidate = 3600
 export const dynamicParams = true
