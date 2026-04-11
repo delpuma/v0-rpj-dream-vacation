@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { PhoneIcon, MailIcon, MapPinIcon } from "lucide-react"
+import { EmailLink } from "@/components/email-link"
 
 export function Footer() {
   return (
@@ -68,10 +69,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="mailto:rpjohnson@dreamvacations.com" className="flex items-center gap-2 text-sm text-blue-200 hover:text-white hover:underline">
-                  <MailIcon className="h-4 w-4 flex-shrink-0" />
-                  <span>rpjohnson@dreamvacations.com</span>
-                </Link>
+                <EmailLink />
               </li>
             </ul>
             <p className="text-xs text-blue-300 mt-4">
