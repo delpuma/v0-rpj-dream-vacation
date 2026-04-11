@@ -38,7 +38,7 @@ export function Header() {
             </Link>
           ))}
           <Link href="tel:+14079512398" className="ml-3">
-            <Button className="bg-teal-600 hover:bg-teal-500 text-white px-5 py-2 rounded-full text-sm font-medium flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
+            <Button className="bg-teal-700 hover:bg-teal-600 text-white px-5 py-2 rounded-full text-sm font-medium flex items-center gap-2 shadow-md hover:shadow-lg transition-all">
               <PhoneIcon className="h-4 w-4" />
               <span>(407) 951-2398</span>
             </Button>
@@ -63,7 +63,7 @@ export function Header() {
                 </Link>
               ))}
               <Link href="tel:+14079512398" className="mt-4">
-                <Button className="w-full bg-teal-600 hover:bg-teal-500 text-white text-base py-3 flex items-center justify-center gap-2 rounded-full h-auto">
+                <Button className="w-full bg-teal-700 hover:bg-teal-600 text-white text-base py-3 flex items-center justify-center gap-2 rounded-full h-auto">
                   <PhoneIcon className="h-5 w-5" />
                   <span>Call (407) 951-2398</span>
                 </Button>

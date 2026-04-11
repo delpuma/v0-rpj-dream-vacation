@@ -137,7 +137,7 @@ export async function DealsSection() {
                 <div className="flex gap-2">
                   <a
                     href={`tel:${AGENT_INFO.phoneTel}`}
-                    className="bg-teal-600 hover:bg-teal-500 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors flex items-center gap-1 min-h-[44px]"
+                    className="bg-teal-700 hover:bg-teal-600 text-white text-sm font-medium px-4 py-2.5 rounded-lg transition-colors flex items-center gap-1 min-h-[44px]"
                     aria-label={`Call to book ${deal.title}`}
                   >
                     <Phone className="w-3.5 h-3.5" />
@@ -167,7 +167,7 @@ export async function DealsSection() {
           </p>
           <a
             href={`tel:${AGENT_INFO.phoneTel}`}
-            className="inline-flex items-center gap-2 bg-teal-600 hover:bg-teal-500 text-white font-semibold px-8 py-3 rounded-full transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-teal-700 hover:bg-teal-600 text-white font-semibold px-8 py-3 rounded-full transition-colors text-lg"
           >
             <Phone className="w-5 h-5" />
             Call {AGENT_INFO.phone} for Exclusive Deals

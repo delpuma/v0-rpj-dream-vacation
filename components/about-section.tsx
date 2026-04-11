@@ -1,6 +1,5 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Award, Shield, Star } from "lucide-react"
 
 export function AboutSection() {
@@ -34,15 +33,11 @@ export function AboutSection() {
             </div>
 
             <div className="flex flex-wrap gap-3 pt-2">
-              <Link href="/about">
-                <Button className="bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full h-auto text-base min-h-[48px]">
-                  Learn More About Richard →
-                </Button>
+              <Link href="/about" className="inline-flex items-center justify-center bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-full text-base min-h-[48px] font-medium transition-colors">
+                Learn More About Richard →
               </Link>
-              <Link href="/services">
-                <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-full h-auto text-base min-h-[48px]">
-                  View Services
-                </Button>
+              <Link href="/services" className="inline-flex items-center justify-center border border-gray-300 text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-full text-base min-h-[48px] font-medium transition-colors">
+                View Services
               </Link>
             </div>
           </div>
