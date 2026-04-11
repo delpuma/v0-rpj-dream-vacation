@@ -91,6 +91,17 @@ export default function Home() {
       "Alaska Cruises", "Sandals Resorts", "Royal Caribbean",
       "Viking Cruises", "Seabourn Cruises", "Uniworld River Cruises",
       "AmaWaterways", "Group Travel", "Adventure Travel",
+      "Regent Seven Seas", "Silversea Cruises", "Oceania Cruises",
+      "Ritz-Carlton Yacht Collection", "Four Seasons Hotels",
+      "Waldorf Astoria", "St. Regis Hotels", "Park Hyatt",
+      "Mandarin Oriental", "Rosewood Hotels", "Abercrombie & Kent",
+      "Tauck Tours", "National Geographic Tours", "Lindblad Expeditions",
+      "Explora Journeys", "Azamara Cruises", "Cunard Line",
+      "Virgin Voyages", "Disney Cruise Line", "Norwegian Haven Suites",
+      "MSC Yacht Club", "Windstar Cruises", "Paul Gauguin Cruises",
+      "Ponant Yacht Cruises", "SeaDream Yacht Club", "Atlas Ocean Voyages",
+      "Rocky Mountaineer", "Orient Express", "Safari Travel",
+      "Galapagos Expeditions", "Private Jet Travel", "Luxury Train Journeys",
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
@@ -196,9 +207,22 @@ export default function Home() {
     ],
   }
 
+  // Speakable schema — tells AI assistants which content to quote
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Travel Advisors Group — Richard Johnson Dream Vacations",
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["#about", ".hero-description", ".stats-section"],
+    },
+    mainEntity: { "@id": `${SITE}/#organization` },
+  }
+
   return (
     <div className="flex flex-col min-h-[100dvh]">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(travelAgencySchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homeFaqSchema) }} />
