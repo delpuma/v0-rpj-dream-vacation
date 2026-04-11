@@ -175,8 +175,8 @@ export async function generateStaticParams() {
   }
 
   // Luxury cruise lines × premium destinations
-  const luxuryCruiseLines = ["seabourn", "viking"]
-  const luxuryDestinations = ["caribbean", "mediterranean", "alaska", "northern-europe", "panama-canal", "greece", "italy", "bermuda"]
+  const luxuryCruiseLines = ["seabourn", "regent-seven-seas", "silversea", "oceania-cruises", "azamara-cruises", "explora-journeys", "ritz-carlton-yacht-collection", "seadream-yacht-club", "windstar-cruises", "atlas-ocean-voyages", "paul-gauguin-cruises", "ponant-yacht-cruises", "seacloud", "viking-ocean", "cunard", "virgin-voyages"]
+  const luxuryDestinations = ["caribbean", "mediterranean", "alaska", "northern-europe", "panama-canal", "greece", "italy", "bermuda", "tahiti", "bora-bora", "galapagos", "norway", "iceland", "seychelles", "maldives"]
 
   for (const cl of luxuryCruiseLines) {
     for (const dest of luxuryDestinations) {
@@ -185,7 +185,7 @@ export async function generateStaticParams() {
   }
 
   // River cruise lines × river destinations
-  const riverCruiseLines = ["viking", "amawaterways", "uniworld"]
+  const riverCruiseLines = ["viking-river", "amawaterways", "uniworld", "avalon-waterways", "celebrity-river-cruises", "american-cruise-lines"]
   const riverDestinations = ["danube-river", "rhine-river", "europe-river-cruises", "france"]
 
   for (const cl of riverCruiseLines) {
@@ -195,12 +195,42 @@ export async function generateStaticParams() {
   }
 
   // Resort brands × resort destinations
-  const resortBrands = ["sandals-resorts", "beaches-resorts"]
-  const resortDestinations = ["caribbean", "jamaica", "bahamas", "st-lucia", "aruba", "turks-and-caicos", "barbados"]
+  const resortBrands = ["sandals-resorts", "beaches-resorts", "hyatt-inclusive-collection"]
+  const resortDestinations = ["caribbean", "jamaica", "bahamas", "st-lucia", "aruba", "turks-and-caicos", "barbados", "cancun", "mexico", "punta-cana"]
 
   for (const brand of resortBrands) {
     for (const dest of resortDestinations) {
       paths.push({ slug: ["cruise-lines", brand, dest] })
+    }
+  }
+
+  // Expedition cruise lines × expedition destinations
+  const expeditionLines = ["lindblad-expeditions", "hx-expeditions", "viking-expeditions", "ponant-yacht-cruises"]
+  const expeditionDests = ["galapagos", "alaska", "iceland", "norway", "northern-europe", "south-africa"]
+
+  for (const cl of expeditionLines) {
+    for (const dest of expeditionDests) {
+      paths.push({ slug: ["cruise-lines", cl, dest] })
+    }
+  }
+
+  // Luxury hotels × luxury destinations
+  const luxuryHotels = ["ritz-carlton", "four-seasons", "waldorf-astoria", "st-regis", "park-hyatt", "mandarin-oriental", "rosewood", "conrad-hotels"]
+  const hotelDests = ["maldives", "bali", "hawaii", "maui", "santorini", "bora-bora", "dubai", "italy", "france", "greece", "seychelles", "cancun", "st-lucia"]
+
+  for (const hotel of luxuryHotels) {
+    for (const dest of hotelDests) {
+      paths.push({ slug: ["cruise-lines", hotel, dest] })
+    }
+  }
+
+  // Tour operators × tour destinations
+  const tourOps = ["abercrombie-and-kent", "tauck-tours", "national-geographic-tours", "g-adventures", "great-safaris"]
+  const tourDests = ["south-africa", "galapagos", "italy", "greece", "costa-rica", "egypt", "japan", "australia", "new-zealand"]
+
+  for (const op of tourOps) {
+    for (const dest of tourDests) {
+      paths.push({ slug: ["cruise-lines", op, dest] })
     }
   }
 
