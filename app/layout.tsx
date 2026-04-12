@@ -104,6 +104,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://images.pexels.com" />
+        <link rel="dns-prefetch" href="https://images.pexels.com" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

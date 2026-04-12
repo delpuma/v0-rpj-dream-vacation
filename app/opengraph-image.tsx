@@ -48,7 +48,7 @@ export default async function Image() {
           borderRadius: "12px",
         }}
       >
-        Call (407) 951-2398 · traveladvisorsgroup.com
+        Call (407) 951-2398 · www.traveladvisorsgroup.com
       </div>
     </div>,
     { ...size },

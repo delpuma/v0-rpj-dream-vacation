@@ -1,6 +1,5 @@
 import { Metadata } from "next"
 import Link from "next/link"
-import Image from "next/image"
 import { neon } from "@neondatabase/serverless"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -76,12 +75,12 @@ export default async function BlogIndexPage() {
                     <article className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow h-full flex flex-col">
                       {post.hero_image_url && (
                         <div className="relative h-48 overflow-hidden">
-                          <Image
+                          {/* Native img for Pexels images to prevent SSG failures */}
+                          <img
                             src={post.hero_image_url}
                             alt={post.hero_image_alt || post.title}
-                            fill
-                            sizes="(max-width: 768px) 100vw, 33vw"
-                            className="object-cover group-hover:scale-105 transition-transform duration-300"
+                            className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            loading="lazy"
                           />
                         </div>
                       )}

@@ -74,7 +74,7 @@ export function LeadCaptureForm({
               <a
                 href={`${AGENT_INFO.corporateUrl}/vacation/contact/get-in-touch`}
                 target="_blank"
-                rel="noopener noreferrer"
+                rel="sponsored noopener noreferrer"
                 className="flex items-center gap-3 text-blue-100 hover:text-white transition-colors"
               >
                 <Mail className="w-5 h-5" />

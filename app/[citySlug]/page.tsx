@@ -124,7 +124,7 @@ export default async function CityPage({
       { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday"], opens: "09:00", closes: "17:00" },
       { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "10:00", closes: "14:00" },
     ],
-    sameAs: [AGENT_INFO.corporateUrl],
+    sameAs: [AGENT_INFO.corporateUrl, "https://www.google.com/search?kgmid=/g/11hzzxjyn2"],
   }
 
   const faqSchema = {

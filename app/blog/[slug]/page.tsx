@@ -129,13 +129,11 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           {/* Hero */}
           {post.hero_image_url && (
             <div className="relative w-full h-[300px] md:h-[450px]">
-              <Image
+              {/* Native img for Pexels images to prevent SSG failures */}
+              <img
                 src={post.hero_image_url}
                 alt={post.hero_image_alt || post.title}
-                fill
-                sizes="100vw"
-                priority
-                className="object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
               {post.hero_image_credit && (

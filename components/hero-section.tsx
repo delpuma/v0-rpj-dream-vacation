@@ -63,7 +63,7 @@ export function HeroSection() {
 
         {/* Trust line */}
         <p className="animate-fade-up delay-400 text-sm text-white/80">
-          CLIA Certified · Dream Vacations Franchise Owner · Serving Central Florida & Nationwide
+          500+ Vacations Planned · 5-Star Rated · $0 Planning Fees · CLIA Certified
         </p>
       </div>
 

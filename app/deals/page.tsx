@@ -96,7 +96,12 @@ export default async function DealsPage() {
                         <span>{deal.cruise_line}</span>
                         {deal.is_featured && <span className="ml-auto bg-amber-100 text-amber-700 px-2 py-0.5 rounded-full text-xs">Featured</span>}
                       </div>
-                      <h2 className="text-lg font-bold text-gray-900 group-hover:text-teal-600 transition-colors mb-3">{deal.title}</h2>
+                      <h2 className="text-lg font-bold text-gray-900 group-hover:text-teal-600 transition-colors mb-1">{deal.title}</h2>
+                      {deal.price_original && deal.price_from && (
+                        <p className="text-xs font-semibold text-red-600 mb-2">
+                          🔥 Save ${(Number(deal.price_original) - Number(deal.price_from)).toLocaleString()} per person — limited availability
+                        </p>
+                      )}
 
                       <div className="space-y-1.5 text-sm text-gray-600 mb-3">
                         {deal.ship_name && <div className="flex items-center gap-2"><Ship className="w-3.5 h-3.5 text-gray-400" />{deal.ship_name}</div>}
@@ -126,7 +131,7 @@ export default async function DealsPage() {
                       </a>
                     </div>
                     {deal.booking_url && (
-                      <a href={deal.booking_url} target="_blank" rel="noopener noreferrer" className="block text-center text-xs text-teal-600 hover:underline mt-2 px-5 pb-3">
+                      <a href={deal.booking_url} target="_blank" rel="sponsored noopener noreferrer" className="block text-center text-xs text-teal-600 hover:underline mt-2 px-5 pb-3">
                         View full details on Dream Vacations →
                       </a>
                     )}

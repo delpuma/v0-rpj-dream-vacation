@@ -14,6 +14,7 @@ import {
   LazyExploreCta,
   LazyChatbot,
   LazyScrollToTop,
+  LazyExitIntent,
 } from "@/components/lazy-sections"
 
 const SITE = "https://www.traveladvisorsgroup.com"
@@ -74,6 +75,7 @@ export default function Home() {
     sameAs: [
       "https://rpjohnson.dreamvacations.com",
       "https://travelagents.dreamvacations.com/agents/agent/166212",
+      "https://www.google.com/search?kgmid=/g/11hzzxjyn2",
     ],
     memberOf: {
       "@type": "Organization",
@@ -156,6 +158,7 @@ export default function Home() {
     ],
     sameAs: [
       "https://rpjohnson.dreamvacations.com",
+      "https://www.google.com/search?kgmid=/g/11hzzxjyn2",
     ],
   }
 
@@ -243,6 +246,7 @@ export default function Home() {
       </main>
       <LazyChatbot />
       <LazyScrollToTop />
+      <LazyExitIntent />
       <Footer />
     </div>
   )

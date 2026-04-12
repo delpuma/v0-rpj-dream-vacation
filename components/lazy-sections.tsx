@@ -32,3 +32,8 @@ export const LazyScrollToTop = dynamic(
   () => import("@/components/scroll-to-top-button").then((m) => ({ default: m.ScrollToTopButton })),
   { ssr: false }
 )
+
+export const LazyExitIntent = dynamic(
+  () => import("@/components/exit-intent-popup").then((m) => ({ default: m.ExitIntentPopup })),
+  { ssr: false }
+)
